@@ -1,19 +1,24 @@
 package com.packt.cookbook;
 
+import java.util.Map;
 import java.util.Set;
 
 public class AttributeData
 {
 
-    public Set<String> getRealmSet () { return realmSet; }
-    public void setRealmSet (Set<String> realmSet) { this.realmSet = realmSet; }
-    private Set<String> realmSet;
+    public Set<Realm> getRealmSet () { return realmSet; }
+    public void setRealmSet (Set<Realm> realmSet) { this.realmSet = realmSet; }
+    private Set<Realm> realmSet;
 
-    public MapData getMapData () { return mapData; }
-    public void setMapData (MapData mapData) { this.mapData = mapData; }
-    private MapData mapData;
+    public Map<String, String> mapData;
+    public Map<String, String> getMapData () { return mapData; }
+    public void setMapData (Map<String, String> mapData) { this.mapData = mapData; }
 
-    public class MapData {
+//    public MapData getMapData () { return mapData; }
+//    public void setMapData (MapData mapData) { this.mapData = mapData; }
+//    private MapData mapData;
+
+    public static class Realm {
         public String getCustomerSiteName ()
         {
             return customerSiteName;
@@ -50,9 +55,9 @@ public class AttributeData
 
         private String serviceManagerType;
 
-        public MapData () {
-
-        }
+//        public MapData () {
+//
+//        }
 
 //        public MapData (String customerSiteName, String aribaSNNetworkId, String serviceManagerType)
 //        {
